@@ -37,10 +37,10 @@ export const ResumePreview: React.FC<ResumePreviewProps> = ({ data, templateId }
   };
 
   return (
-    <div className="border border-border rounded-lg overflow-hidden shadow-lg bg-white">
+    <div className="border border-border rounded-lg overflow-hidden shadow-lg bg-white print:border-0 print:shadow-none">
       <div 
         id="resume-preview" 
-        className="w-full max-w-[8.5in] mx-auto bg-white"
+        className="w-full max-w-[8.5in] mx-auto bg-white print:max-w-none print:mx-0"
         style={{ minHeight: '11in' }}
       >
         {renderTemplate()}
