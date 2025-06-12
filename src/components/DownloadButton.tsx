@@ -14,7 +14,7 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({ resumeData, temp
   const componentRef = useRef<HTMLDivElement>(null);
 
   const handlePrint = useReactToPrint({
-    content: () => componentRef.current,
+    contentRef: componentRef,
     documentTitle: resumeData.personalInfo.fullName 
       ? `${resumeData.personalInfo.fullName.replace(/\s+/g, '_')}_Resume`
       : 'Resume',
